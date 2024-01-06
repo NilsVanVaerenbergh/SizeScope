@@ -3,6 +3,7 @@
   "displayName": "SizeScope",
   "description": "A vscode extension to view the total size of your current workspace!",
   "version": "0.0.1",
+  "publisher": "nils-van-vaerenbergh",
   "author": {
     "name": "Nils Van Vaerenbergh",
     "url": "https://github.com/NilsVanVaerenbergh"
@@ -36,15 +37,16 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run package",
     "compile": "webpack",
     "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
+    "webpack:package": "webpack --mode production --devtool hidden-source-map",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "publish": "vsce publish --no-dependencies",
+    "package": "vsce package --no-dependencies"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
