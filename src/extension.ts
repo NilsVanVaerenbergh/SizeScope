@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { OnLoad } from './OnLoad';
 
-export const EXTENSION_ID = "foldersize";
+export const EXTENSION_ID = "sizescope";
 export function activate(context: vscode.ExtensionContext) {
 	let status = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right,-1);
 	OnLoad.update(status);

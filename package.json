@@ -3,6 +3,15 @@
   "displayName": "SizeScope",
   "description": "A vscode extension to view the total size of your current workspace!",
   "version": "0.0.1",
+  "author": {
+    "name": "Nils Van Vaerenbergh",
+    "url": "https://github.com/NilsVanVaerenbergh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NilsVanVaerenbergh/SizeScope"
+  },
+  "icon": "assets/SizeScoped.png",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -16,9 +25,9 @@
   "contributes": {
     "commands": [],
     "configuration": {
-      "title": "foldersize",
+      "title": "sizescope",
       "properties": {
-        "foldersize.decimal": {
+        "sizescope.decimal": {
           "type": "number",
           "default": 2,
           "description": "Set the amount of decimals."
