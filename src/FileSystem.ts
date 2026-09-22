@@ -1,18 +1,5 @@
-import { statSync } from "fs";
 import * as vscode from "vscode";
 export class FileSystem {
-    public static async getBytes() : Promise<number> {
-        let size = 0;
-        let files = await FileSystem.getAllFiles();
-        if(files.length <= 0) {
-            return Promise.reject(new Error("No files found."));
-        }
-        for(let file of files) {
-            const stat = statSync(file.fsPath);
-            size += stat.size;
-        }
-        return Promise.resolve(size);
-    } 
     public static async getAllFiles(): Promise<vscode.Uri[]> {
         let folders = vscode.workspace.workspaceFolders;
         if(!folders) {
